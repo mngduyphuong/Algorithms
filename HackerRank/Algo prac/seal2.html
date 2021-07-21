@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Duy Phuong Nguyen</h2>
+
+<p>SEAL COMMERCE ASIA</p>
+
+<p id="demo"></p>
+
+<script>
+let input = [1, 25, 7, -7, -3, 12, -22, 0];
+function sortItems(array) {
+	for (let i = 0; i < array.length; i++) {
+		for (let j = 0; j < array.length; j++) {
+			if (array[j] > array[j + 1]) {
+				let temp = array[j];
+				array[j] = array[j + 1];
+				array[j + 1] = temp;
+			}
+		}
+	}
+	return array;
+}
+let z = sortItems(input);
+document.getElementById("demo").innerHTML =
+"The value of z is: " + z;
+</script>
+
+</body>
+</html>
